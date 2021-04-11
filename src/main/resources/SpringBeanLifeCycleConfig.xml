@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="customer" class="com.mo16.springcoredemo.beanLifeCycle.Customer" init-method="init" destroy-method="customDestroy">
+        <constructor-arg value="mos3ab"/>
+        <property name="name" value="mosup"/>
+    </bean>
+    <bean id="customerBeanPostProcessor" class="com.mo16.springcoredemo.beanLifeCycle.CustomerBeanPostProcessor"/>
+<!--    <context:component-scan base-package="com.mo16.springcoredemo"/>-->
+</beans>
